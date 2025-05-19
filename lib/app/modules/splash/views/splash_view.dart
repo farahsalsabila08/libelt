@@ -324,7 +324,7 @@ class _SplashContentState extends State<SplashContent> with TickerProviderStateM
                 Transform.translate(
                   offset: Offset(0, _letterOffsetAnimations[1].value),
                   child: SizedBox(
-                    width: 30,
+                    width: 22,
                     child: Stack(
                       clipBehavior: Clip.none,
                       children: [
@@ -341,8 +341,8 @@ class _SplashContentState extends State<SplashContent> with TickerProviderStateM
                         ),
                         // Star instead of the dot
                         Positioned(
-                          top: 15, // Adjusted to be right above the i
-                          left: 4, // Centered better
+                          top: 17, // Adjusted to be right above the i
+                          left: 1, // Centered better
                           child: Transform.rotate(
                             angle: _starRotateAnimation.value,
                             child: Transform.scale(
@@ -351,7 +351,7 @@ class _SplashContentState extends State<SplashContent> with TickerProviderStateM
                                 opacity: _starBrightnessAnimation.value.clamp(0.0, 1.0),
                                 child: const Icon(
                                   Icons.star,
-                                  size: 28, // Increased from 18 to 28
+                                  size: 20, // Increased from 18 to 28
                                   color: primaryBlue,
                                 ),
                               ),
@@ -457,7 +457,7 @@ class _SplashContentState extends State<SplashContent> with TickerProviderStateM
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: ElevatedButton(
               onPressed: () {
-                Get.offAllNamed('/home');
+                Get.offAllNamed('/onboarding');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: primaryBlue,
